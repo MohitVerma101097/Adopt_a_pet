@@ -1,0 +1,152 @@
+*{
+    font-family: sans-serif;
+}
+
+html,body {
+    margin:0;
+    padding:0;
+    background-color:rgb(217, 212, 255);
+}
+
+.intro {
+    background-color: rgb(116, 39, 189);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.intro:before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    height: 10px;
+    background: linear-gradient(to left,rgb(255, 35, 255), blueviolet) 
+}
+
+.intro:after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 10px;
+    background: linear-gradient(to right, rgb(255, 32, 255), blueviolet) 
+}
+
+.intro h1 {
+    font-weight: normal;
+    font-size: 5rem;
+}
+
+.intro h2 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.filter-nav a:active {
+    background-color: blueviolet;
+    color: white;
+}
+
+.filter-nav a {
+    text-decoration: none;
+    padding: .5rem;
+    border: 1px solid blueviolet;
+    border-radius: 4px;
+    margin: 4px;
+    color:rgb(116, 39, 189)
+
+}
+
+.animals{
+    max-width: 700px;
+    margin: 0 auto
+}
+
+.animal-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.animal-card-photo {
+  order: 1;
+  grid-row: 1; 
+  overflow: hidden;
+}
+
+
+.animal-card-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease-in-out;
+}
+
+.animal-card:hover img {
+    transform: rotate(20deg) scale(1.3);
+}
+
+.animal-card-text {
+  padding: 20px 25px ;  
+}
+
+.animal-card-text h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+
+.animal-card-text small {
+    color: gray;
+}
+
+.animal-card-text p {
+    margin: .8rem 0;
+    padding:0;
+    line-height: 1.5;
+}
+
+.primary-btn{
+    background: linear-gradient(rgb(253, 35, 253),blueviolet);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.primary-btn:hover{
+    background: linear-gradient(#e35ea7, #d82eb9);
+}
+
+@media screen and (max-width: 768px) {
+    .animal-card{
+        grid-template-columns: 100%;
+    }
+
+    .intro h1 {
+        font-size: 4rem;
+    }
+
+    .intro h2 {
+        font-size: 1rem;
+    }
+}
